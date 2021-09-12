@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "cross-env TS_NODE_PROJECT=\"tsconfig-for-webpack-config.json\" webpack serve --env development",
     "build": "cross-env TS_NODE_PROJECT=\"tsconfig-for-webpack-config.json\" webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Sunuk",
   "license": "MIT",
   "dependencies": {
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
     "@types/gravatar": "^1.8.3",
     "@types/react": "^17.0.19",
     "@types/react-dom": "^17.0.9",
@@ -20,6 +22,7 @@
     "gravatar": "^1.8.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-refresh": "^0.10.0",
     "style-loader": "^3.2.1",
     "ts-node": "^10.2.1",
     "typescript": "^4.4.2",
@@ -37,7 +40,9 @@
     "@types/webpack-dev-server": "^4.1.0",
     "babel-loader": "^8.2.2",
     "eslint": "^7.32.0",
+    "fork-ts-checker-webpack-plugin": "^6.3.3",
     "prettier": "^2.3.2",
-    "webpack": "^5.52.0"
+    "webpack": "^5.52.0",
+    "webpack-dev-server": "^4.2.0"
   }
 }

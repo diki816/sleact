@@ -76,8 +76,11 @@ const config: webpack.Configuration = {
         //contentBase: path.join(__dirname, 'dist'),
         historyApiFallback: true, //react router
         port: 3090,
+        // static: {
+        //     directory: path.join(__dirname, 'dist'),
+        // },
         //contentBase: path.join(__dirname, "./"),
-        //publicPath: '/dist/',
+        publicPath: '/dist/',
     },
 };
 

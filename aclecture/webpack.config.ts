@@ -43,14 +43,11 @@ const config: webpack.Configuration = {
                     ],
                     env: {
                         development: {
-                            plugins: [require.resolve('react-refresh/babel')]
+                            plugins:[['@emotion', { sourceMap: true }], require.resolve('react-refresh/babel')]
                         },
-                        // development: {
-                        //     plugins:[['emotion', { sourceMap: true }], require.resolve('react-refresh/babel')]
-                        // },
-                        // production: {
-                        //     plugins:['emtion'],
-                        // },
+                        production: {
+                            plugins:['@emtion'],
+                        },
                     },
                 },
                 exclude: path.join(__dirname, 'node_modules'),
@@ -76,12 +73,12 @@ const config: webpack.Configuration = {
         historyApiFallback: true, // react router
         port: 3090,
         publicPath: '/dist/',
-        // proxy: {
-        //   '/api/': {
-        //     target: 'http://localhost:3095',
-        //     changeOrigin: true,
-        //   },
-        // },
+        proxy: { //Server UI 모두 localhost인 경우만 사용가능
+          '/api/': {
+            target: 'http://localhost:3095',
+            changeOrigin: true,
+          },
+        },
     },
 };
 

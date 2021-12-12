@@ -8,6 +8,7 @@
     "build": "cross-env TS_NODE_PROJECT=\"tsconfig-for-webpack-config.json\" webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+
   "author": "Sunuk",
   "license": "MIT",
   "dependencies": {

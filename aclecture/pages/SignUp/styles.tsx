@@ -50,6 +50,10 @@ export const Input = styled.input`
         --saf-0: rgba(var(--sk_hightlight, 10, 100, 163), 1);
         box-shadow: 0 0 0 1px var(--saf-0), 0 0 0 5px rgba(29, 155, 209, 0.3);
     }
+    --saf-0: rgba(var(--sk__foreground_high_solid, 134, 134,134), 1);
+    border: 1px solid var(--saf-0);
+    transition: border 80ms ease-out, box-shadow
+
 `;
 
 export const Button = styled.button`
@@ -61,6 +65,7 @@ export const Button = styled.button`
     border: none;
     font-size: 18px;
     font-weight: 900;
+    font-size: 10px;
     height: 44px;
     min-width: 96px;
     padding: 0 16px 3px;
@@ -83,6 +88,15 @@ export const Button = styled.button`
 export const Success = styled.div`
     color: #2eb67d;
     font-weight: bold;
+        --saf-0: rgba(var(--sk_hightlight, 10, 100, 163), 1);
+        box-shadow: 0 0 0 1px var(--saf-0), 0 0 0 5px rgba(29, 155, 209, 03.);
+    }
+`;
+
+export const Error = styled.div`
+    color: #e01e5a;
+    margin: 0px 0 16p;
+    font-weight: bold; 
 `;
 
 export const LinkContainer = styled.p`
@@ -101,9 +115,3 @@ export const LinkContainer = styled.p`
     }
 `;
 
-
-export const Error = styled.div`
-  color: #e01e5a;
-  margin: 8px 0 16px;
-  font-weight: bold;
-`;

@@ -21,7 +21,7 @@ const SignUp = () => {
       setPassword(e.target.value);
       setMismatchError(passwordCheck !== e.target.value);
     },
-    [passwordCheck],
+    [passwordCheck, setPassword],
   );
 
   const onChangePasswordCheck = useCallback(
@@ -29,7 +29,7 @@ const SignUp = () => {
       setPasswordCheck(e.target.value);
       setMismatchError(password !== e.target.value);
     },
-    [password],
+    [password, setPasswordCheck],
   );
 
   const onSubmit = useCallback(
@@ -47,7 +47,8 @@ const SignUp = () => {
             setSignUpSuccess(true);
           })
           .catch((error) => {
-            setSignUpError(error.response?.data?.statusCode === 403);
+            console.log(error.response?.data);
+            setSignUpError(error.response?.data?.code === 403);
           });
       }
     },

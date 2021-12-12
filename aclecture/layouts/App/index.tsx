@@ -7,7 +7,11 @@ import loadable from '@loadable/component';
 
 const LogIn = loadable( () => import('@pages/LogIn'));
 const SignUp = loadable( () => import('@pages/SignUp'));
-const Channel = loadable( () => import('@pages/Channel'));
+
+//workspace까지만 라우팅하고 workspace에서 다시 라우팅(nested routing)
+// const Channel = loadable( () => import('@pages/Channel'));
+// const DirectMessage = loadable( () => import('@pages/DirectMessage'));
+const Workspace = loadable( () => import('@layouts/Workspace'));
 
 const App = () => {
     // return <div> Plase, Wait!!! </div>;
@@ -15,7 +19,9 @@ const App = () => {
         <Redirect exact path="/" to="/login" />
         <Route path="/login" component={LogIn} />
         <Route path="/signUp" component={SignUp} />
-        <Route path="/workspace/channel" component={Channel} />
+        <Route path="/workspace" component={Workspace} />
+        {/* <Route path="/workspace/channel" component={Channel} />
+        <Route path="/worksapce/dm" component={DirectMessage} /> */}
     </Switch>
 
 };

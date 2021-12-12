@@ -1,10 +1,9 @@
 import React from 'react';
-import Workspace from './Workspace';
+
+//nest route 사용하면서 <Workspace> 삭제>
 const Channel = () => {
     return (
-        <Workspace>
-            <div>Welcome to Login</div>
-        </Workspace>
+        <div>channel</div>
     );
 }
 

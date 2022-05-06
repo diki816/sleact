@@ -1,1 +1,1 @@
-babel과 webpack설정하기 09:01
+babel과 webpack설정하기 15:01

@@ -1,0 +1,25 @@
+{
+  "name": "sleact",
+  "version": "1.0.0",
+  "description": "0. node 14버전(12나 15도 괜찮음)과 MySQL을 미리 설치하기\r 1. cd back (멀티캠퍼스 강좌 수강자라면 cd multicampus-back)\r 2. npm i\r 3. .env 작성하기(COOKIE_SECRET과 MYSQL_PASSWORD 비밀번호 설정)\r 4. config/config.json 설정(MYSQL 접속 설정)\r 5. npx sequelize db:create(스키마 생성)\r 6. npm run dev했다가 ctrl + c로 끄기(테이블 생성)\r 7. npx sequelize db:seed:all(기초 데이터 넣기)\r 8. npm run dev\r 9. localhost:3095에서 서버 돌아가는 중\r 10. 백엔드 개발자가 API.md와 typings/db.ts를 남겨둔 상황",
+  "main": "index.js",
+  "dependencies": {
+    "babel-loader": "^8.2.2",
+    "webpack-cli": "^4.8.0",
+    "webpack": "^5.52.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diki816/sleact.git"
+  },
+  "author": "supark",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/diki816/sleact/issues"
+  },
+  "homepage": "https://github.com/diki816/sleact#readme"
+}
